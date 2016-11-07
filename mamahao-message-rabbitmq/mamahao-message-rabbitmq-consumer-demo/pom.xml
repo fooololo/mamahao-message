@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mamahao-message-rabbit-consumer-demo</artifactId>
+    <artifactId>mamahao-message-rabbitmq-consumer-demo</artifactId>
     <version>1.0.0</version>
     <properties>
         <mamahao-message-rabbitmq-consumer.version>1.0.0</mamahao-message-rabbitmq-consumer.version>
@@ -31,6 +31,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>

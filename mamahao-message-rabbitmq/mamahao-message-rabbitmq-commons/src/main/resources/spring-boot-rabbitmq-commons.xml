@@ -13,8 +13,8 @@
     <rabbit:connection-factory
         id="connectionFactory"
         addresses="localhost:32775"
-        username="guest"
-        password="guest"
+        username="admin"
+        password="admin"
         publisher-confirms="true"
         publisher-returns="true"
         virtual-host="/demo"
@@ -29,17 +29,17 @@
         durable="true"
         auto-declare="false"
         exclusive="false"
-        name="demo_queue"
+        name="demoQueue"
     />
 
     <rabbit:direct-exchange
         id="demoExchange"
-        name="exchange_demo"
+        name="demoExchange"
         auto-delete="false"
     >
         <rabbit:bindings>
             <rabbit:binding
-                queue="demo_queue"
+                queue="demoQueue"
                 key="demo_msg"
             />
         </rabbit:bindings>

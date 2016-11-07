@@ -1,13 +1,12 @@
 package com.mamahao.message.rabbitmq.consumer.demo;
 
-import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-import java.io.PrintStream;
+import java.io.IOException;
 
 /**
  * Company        :   mamahao.com
@@ -20,21 +19,21 @@ import java.io.PrintStream;
 @ComponentScan({"com.mamahao.message.rabbitmq"})
 public class ConsumerApplication implements CommandLineRunner{
     public static void main(String[] args) {
-        new SpringApplicationBuilder(ConsumerApplication.class)
+        ConfigurableApplicationContext application = new SpringApplicationBuilder()
+                .sources(ConsumerApplication.class)
                 .web(false)
-                .headless(true)
-                .bannerMode(Banner.Mode.OFF)
                 .run(args);
+        application.registerShutdownHook();
+
     }
 
     @Override
     public void run(String... args) throws Exception {
         System.out.println("ConsumerApplication启动成功");
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-    @Bean
-    public PrintStream printStream() {
-        return System.out;
-    }
-
 }

@@ -45,3 +45,12 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+/mamahao-message.iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq.iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-consumer-demo/mamahao-message-rabbitmq-consumer-demo.iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-consumer-demo/mamahao-message-rabbitmq-consumer-demo (1).iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-commons/mamahao-message-rabbitmq-commons.iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-consumer/mamahao-message-rabbitmq-consumer.iml
+/.idea/
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-producer/mamahao-message-rabbitmq-producer.iml
+/mamahao-message-rabbitmq/mamahao-message-rabbitmq-producer-demo/mamahao-message-rabbitmq-producer-demo.iml

@@ -15,8 +15,17 @@
     <modules>
         <module>mamahao-message-rabbitmq-commons</module>
         <module>mamahao-message-rabbitmq-producer</module>
+        <module>mamahao-message-rabbitmq-producer-demo</module>
         <module>mamahao-message-rabbitmq-consumer</module>
-        <module>mamahao-message-rabbit-consumer-demo</module>
+        <module>mamahao-message-rabbitmq-consumer-demo</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
