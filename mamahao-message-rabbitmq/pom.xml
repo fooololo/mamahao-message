@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>mamahao-message-rabbitmq-commons</module>
         <module>mamahao-message-rabbitmq-producer-demo</module>
         <module>mamahao-message-rabbitmq-consumer-demo</module>
     </modules>
