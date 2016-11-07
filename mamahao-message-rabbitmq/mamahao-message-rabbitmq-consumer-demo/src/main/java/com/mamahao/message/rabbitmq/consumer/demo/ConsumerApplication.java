@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 
 import java.io.IOException;
 
@@ -17,6 +18,7 @@ import java.io.IOException;
  */
 @SpringBootApplication
 @ComponentScan({"com.mamahao.message.rabbitmq"})
+@ImportResource({"classpath:spring-boot-rabbitmq-consumer.xml"})
 public class ConsumerApplication implements CommandLineRunner{
     public static void main(String[] args) {
         ConfigurableApplicationContext application = new SpringApplicationBuilder()

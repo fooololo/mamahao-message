@@ -10,6 +10,41 @@
         http://www.springframework.org/schema/rabbit
         http://www.springframework.org/schema/rabbit/spring-rabbit.xsd">
 
+    <rabbit:connection-factory
+            id="connectionFactory"
+            addresses="localhost:32775"
+            username="admin"
+            password="admin"
+            publisher-confirms="true"
+            publisher-returns="true"
+            virtual-host="/demo"
+    />
+
+    <rabbit:admin
+            connection-factory="connectionFactory"
+    />
+
+    <rabbit:queue
+            id="demoQueue"
+            durable="true"
+            auto-declare="false"
+            exclusive="false"
+            name="demoQueue"
+    />
+
+    <rabbit:direct-exchange
+            id="demoExchange"
+            name="demoExchange"
+            auto-delete="false"
+    >
+        <rabbit:bindings>
+            <rabbit:binding
+                    queue="demoQueue"
+                    key="demo_msg"
+            />
+        </rabbit:bindings>
+    </rabbit:direct-exchange>
+
     <bean id="jsonMessageConverter"  class="org.springframework.amqp.support.converter.Jackson2JsonMessageConverter" />
 
     <rabbit:template

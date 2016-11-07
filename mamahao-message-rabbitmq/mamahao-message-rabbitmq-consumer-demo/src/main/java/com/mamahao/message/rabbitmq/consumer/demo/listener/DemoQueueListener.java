@@ -2,7 +2,6 @@ package com.mamahao.message.rabbitmq.consumer.demo.listener;
 
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageListener;
-import org.springframework.stereotype.Component;
 
 /**
  * Company        :   mamahao.com
@@ -11,10 +10,10 @@ import org.springframework.stereotype.Component;
  * Time           :   17:46
  * Description    :
  */
-@Component
-public class DemoListener  implements MessageListener{
+public class DemoQueueListener implements MessageListener{
     @Override
     public void onMessage(Message message) {
         System.out.println("message:" + message.getBody());
+        System.out.println("messageValue:" + new String(message.getBody()));
     }
 }
